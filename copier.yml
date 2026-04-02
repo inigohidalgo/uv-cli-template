@@ -18,12 +18,7 @@ project_description:
 author_name:
   type: str
   help: Author name
-  default: "Inigo Hidalgo Rey"
-
-author_email:
-  type: str
-  help: Author email
-  default: "inigo.hidalgorey@axpo.com"
+  default: "Inigo H"
 
 python_version:
   type: str
