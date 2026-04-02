@@ -1,0 +1,18 @@
+[project]
+name = "{{ project_name }}"
+version = "0.1.0"
+description = "{{ project_description }}"
+authors = [
+    { name = "{{ author_name }}", email = "{{ author_email }}" }
+]
+requires-python = ">={{ python_version }}"
+dependencies = [
+    "click>=8",
+]
+
+[project.scripts]
+{{ project_name }} = "{{ project_slug }}.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.10.8,<0.11.0"]
+build-backend = "uv_build"

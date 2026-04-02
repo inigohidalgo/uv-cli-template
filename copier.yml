@@ -1,0 +1,31 @@
+_min_copier_version: "9"
+
+project_name:
+  type: str
+  help: Project name (lowercase, digits, hyphens — e.g. "my-tool")
+  validator: "{% if not project_name | regex_search('^[a-z][a-z0-9-]*$') %}Must be lowercase letters, digits, and hyphens only, starting with a letter{% endif %}"
+
+project_slug:
+  type: str
+  default: "{{ project_name | replace('-', '_') }}"
+  when: false
+
+project_description:
+  type: str
+  help: Short description for pyproject.toml and CLI --help
+  default: "A CLI tool."
+
+author_name:
+  type: str
+  help: Author name
+  default: "Inigo Hidalgo Rey"
+
+author_email:
+  type: str
+  help: Author email
+  default: "inigo.hidalgorey@axpo.com"
+
+python_version:
+  type: str
+  help: Minimum Python version
+  default: "3.12"

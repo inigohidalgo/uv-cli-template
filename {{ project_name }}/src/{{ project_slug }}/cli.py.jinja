@@ -1,0 +1,17 @@
+"""{{ project_name }}: {{ project_description }}"""
+
+import click
+
+
+@click.group()
+def cli():
+    """{{ project_description }}"""
+
+
+# Register commands:
+# from .commands.example import example
+# cli.add_command(example)
+
+
+def main():
+    cli()
